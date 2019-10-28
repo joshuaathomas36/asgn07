@@ -38,9 +38,21 @@
 
 	$emp1 = new Employee();
 
-	$emp1->findEmployee($id);
-
-	print ("<p>Weekly Pay for ".$emp1->getFirstName()." ". $emp1->getLastName().": $".$emp1->getWeeklyPay()."</p>");
+	$result = $emp1->findEmployee($id);
+  
+    if($result == 1)
+    {
+      print ("<p>Weekly Pay for ".$emp1->getFirstName()." ". $emp1->getLastName().": $".$emp1->getWeeklyPay()."</p>");
+    }
+	else
+    {
+      print ("<p><em>Employee not be found</em></p>");
+    }
+  
+  include("my-functions.php");
+  
+        $backToFunctions = backToFunctions();
+        print($backToFunctions)
 	?>
 
 </body>

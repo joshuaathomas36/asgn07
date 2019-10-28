@@ -17,12 +17,19 @@
 	<h1>WAGE REPORT</h1>
 
 	<?php
+  
+    include("inc-employee-object.php");
 
 	$emp1 = new Employee();
 
 	$emp1->setID("123456");
 
 	print ("<p>The employee's ID is ".$emp1->getID()."</p>");
+  
+  include("my-functions.php");
+  
+        $backToFunctions = backToFunctions();
+        print($backToFunctions)
 	?>
 </body>
 </html>

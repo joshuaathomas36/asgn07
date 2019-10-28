@@ -32,7 +32,12 @@
 
 	$emp1->findEmployee($id);
 
-	print ("<p>Weekly Pay for ".$emp1->getFirstName()." ". $emp1->getLastName().": $".$emp1->getWeeklyPay()."</p>");
+	print ("<p>Annual Pay for ".$emp1->getFirstName()." ". $emp1->getLastName().": $".$emp1->getAnnualPay()."</p>");
+  
+    include("my-functions.php");
+  
+        $backToFunctions = backToFunctions();
+        print($backToFunctions)
 ?>
 </body>
 </html>

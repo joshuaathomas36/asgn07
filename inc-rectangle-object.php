@@ -9,7 +9,7 @@ class Rectangle
 		return $this->x;
 	}
 	
-	public function setX($x)	
+	public function setX($x)
 	{
 		$this->x = $x;
 	}

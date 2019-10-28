@@ -14,11 +14,21 @@
 <body>
 	<h1>Software Order</h1>
 <?php
-
-	// your code here
-
+    include("inc-order-object.php");
 	
+    $cost = $_POST["cost"];
+    $items = $_POST["items"];
+    
+	$Order = new Order();
 	
+    $Order->setItemCost($cost);
+    $Order->setNumItems($items);
+  
+    $subTotal = $Order->getSubTotal();
+    $tax = $Order->getSalesTax();
+    $shippingHandling = $Order->getShippingHandling();
+    $total = $Order->getTotal();
+  
 	// you can change the variables in the table if you need to use different names
 	print("	<table>
 			<tr><td>Sub-Total:</td><td>$subTotal</td></tr>
@@ -26,6 +36,11 @@
 			<tr><td>Shipping and Handling:</td><td>$shippingHandling</td></tr>
 			<tr><td>TOTAL:</td><td>$total</td></tr>
 			</table>");
+  
+    include("my-functions.php");
+  
+        $backToFunctions = backToFunctions();
+        print($backToFunctions)
 ?>
 </body>
 </html>

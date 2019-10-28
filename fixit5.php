@@ -24,16 +24,21 @@
 
 	$emp1 = new Employee();
 
-	$emp1->getID("123456");
-	$emp1->getFirstName("Alan");
-	$emp1->getLastName("Turing");
-	$emp1->getHourlyWage(15.25);
+	$emp1->setID("123456");
+	$emp1->setFirstName("Alan");
+	$emp1->setLastName("Turing");
+	$emp1->setHourlyWage(15.25);
 	print("<table>
 			<tr><td>ID</td><td>".$emp1->getID()."</td></tr>
 			<tr><td>First Name</td><td>".$emp1->getFirstName()."</td></tr>
 			<tr><td>Last Name</td><td>".$emp1->getLastName()."</td></tr>
 			<tr><td>Weekly Pay</td><td>".$emp1->getWeeklyPay(40)."</td></tr>
 			</table>");
+  
+  include("my-functions.php");
+  
+        $backToFunctions = backToFunctions();
+        print($backToFunctions)
 	?>
 </body>
 </html>

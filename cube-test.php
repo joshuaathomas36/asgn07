@@ -39,6 +39,11 @@
 			<tr><td>5 x 5 x 5</td><td>".$cube2->getArea()."</td><td>".$cube2->getVolume()."</td></tr>
 			<tr><td>2 x 4 x 10</td><td>".$cube3->getArea()."</td><td>".$cube3->getVolume()."</td></tr>
 			</table>");
+  
+  include("my-functions.php");
+  
+        $backToFunctions = backToFunctions();
+        print($backToFunctions)
 	?>
 </body>
 </html>

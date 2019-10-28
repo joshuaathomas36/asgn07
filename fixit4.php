@@ -25,8 +25,14 @@
 	$emp1 = new Employee();
 
 	$emp1->setID("123456");
-	print ("<p>The weekly pay for employee #".$emp1->getID()." is $".$emp1->getWeeklyPay(40)."</p>");
 	$emp1->setHourlyWage(15.25);
+  
+	print ("<p>The weekly pay for employee #".$emp1->getID()." is $".$emp1->getWeeklyPay(40)."</p>");
+  
+  include("my-functions.php");
+  
+        $backToFunctions = backToFunctions();
+        print($backToFunctions)
 	?>
 </body>
 </html>
